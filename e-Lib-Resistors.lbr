@@ -283,7 +283,7 @@
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="0402" package="0402">
+<device name="-0402" package="0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -294,7 +294,7 @@
 </technology>
 </technologies>
 </device>
-<device name="0603" package="0603">
+<device name="-0603" package="0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -305,7 +305,7 @@
 </technology>
 </technologies>
 </device>
-<device name="0805" package="0805">
+<device name="-0805" package="0805">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -316,7 +316,7 @@
 </technology>
 </technologies>
 </device>
-<device name="1206" package="1206">
+<device name="-1206" package="1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -327,7 +327,7 @@
 </technology>
 </technologies>
 </device>
-<device name="1210" package="1210">
+<device name="-1210" package="1210">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -338,7 +338,7 @@
 </technology>
 </technologies>
 </device>
-<device name="2010" package="2010">
+<device name="-2010" package="2010">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
