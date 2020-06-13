@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -244,19 +244,35 @@
 <package name="EIA3528">
 <description>&lt;p&gt;Generic EIA 3528 polarized tantalum capacitor&lt;/p&gt;
 &lt;b&gt;Datasheet:&lt;/b&gt; &lt;a href="https://datasheet.octopart.com/TAJA106K016RNJ-AVX-datasheet-8314219.pdf"&gt;EIA3528&lt;/a&gt;</description>
-<wire x1="-0.9" y1="-1.65" x2="-2.6" y2="-1.65" width="0.2032" layer="51"/>
-<wire x1="-2.6" y1="-1.65" x2="-2.6" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="-2.6" y1="1.65" x2="-0.9" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="1" y1="-1.65" x2="2.2" y2="-1.65" width="0.2032" layer="51"/>
-<wire x1="2.2" y1="-1.65" x2="2.6" y2="-1.25" width="0.2032" layer="51"/>
-<wire x1="2.6" y1="-1.25" x2="2.6" y2="1.25" width="0.2032" layer="51"/>
-<wire x1="2.6" y1="1.25" x2="2.2" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="2.2" y1="1.65" x2="1" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="2.9" y1="1.25" x2="2.9" y2="-1.25" width="0.2032" layer="21" style="longdash"/>
+<wire x1="-0.9" y1="-1.65" x2="-2.6" y2="-1.65" width="0.1524" layer="21"/>
+<wire x1="-2.6" y1="-1.65" x2="-2.6" y2="1.65" width="0.1524" layer="21"/>
+<wire x1="-2.6" y1="1.65" x2="-0.9" y2="1.65" width="0.1524" layer="21"/>
+<wire x1="1" y1="-1.65" x2="2.2" y2="-1.65" width="0.1524" layer="21"/>
+<wire x1="2.2" y1="-1.65" x2="2.6" y2="-1.25" width="0.1524" layer="21"/>
+<wire x1="2.6" y1="-1.25" x2="2.6" y2="1.25" width="0.1524" layer="21"/>
+<wire x1="2.6" y1="1.25" x2="2.2" y2="1.65" width="0.1524" layer="21"/>
+<wire x1="2.2" y1="1.65" x2="1" y2="1.65" width="0.1524" layer="21"/>
+<wire x1="2.9" y1="1.25" x2="2.9" y2="-1.25" width="0.1524" layer="21" style="longdash"/>
 <smd name="C" x="-1.65" y="0" dx="2.8" dy="1.4" layer="1" roundness="25" rot="R90"/>
 <smd name="A" x="1.65" y="0" dx="2.8" dy="1.4" layer="1" roundness="25" rot="R90"/>
 <text x="0" y="1.905" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.905" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="EIA7343">
+<description>EIA 7343 tantalum capacitor</description>
+<wire x1="-5" y1="2.5" x2="-2" y2="2.5" width="0.1524" layer="21"/>
+<wire x1="-5" y1="2.5" x2="-5" y2="-2.5" width="0.1524" layer="21"/>
+<wire x1="-5" y1="-2.5" x2="-2" y2="-2.5" width="0.1524" layer="21"/>
+<wire x1="2" y1="2.5" x2="4" y2="2.5" width="0.1524" layer="21"/>
+<wire x1="4" y1="2.5" x2="5" y2="1.5" width="0.1524" layer="21"/>
+<wire x1="5" y1="1.5" x2="5" y2="-1.5" width="0.1524" layer="21"/>
+<wire x1="5" y1="-1.5" x2="4" y2="-2.5" width="0.1524" layer="21"/>
+<wire x1="4" y1="-2.5" x2="2" y2="-2.5" width="0.1524" layer="21"/>
+<smd name="C" x="-3.17" y="0" dx="2.55" dy="2.7" layer="1" roundness="25" rot="R180"/>
+<smd name="A" x="3.17" y="0" dx="2.55" dy="2.7" layer="1" roundness="25" rot="R180"/>
+<text x="0" y="2.667" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.667" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="5.334" y1="1.524" x2="5.334" y2="-1.524" width="0.1524" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -351,6 +367,15 @@
 </gates>
 <devices>
 <device name="-EIA3528" package="EIA3528">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-EIA7343" package="EIA7343">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
