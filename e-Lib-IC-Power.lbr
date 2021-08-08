@@ -295,7 +295,7 @@
 <text x="-12.7" y="10.922" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <text x="2.032" y="-10.922" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
 </symbol>
-<symbol name="MCP73831">
+<symbol name="BATTERY_CHARGER">
 <pin name="VDD" x="-12.7" y="7.62" length="short" direction="in"/>
 <pin name="STAT" x="-12.7" y="-7.62" length="short" direction="out"/>
 <pin name="VBAT" x="12.7" y="7.62" length="short" direction="out" rot="R180"/>
@@ -409,7 +409,7 @@ USB port, the MCP73831/2 adhere to all the
 specifications governing the USB power bus.&lt;/p&gt;
 &lt;b&gt;Datasheet:&lt;/b&gt; &lt;a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/9/5/MCP738312.pdf"&gt;MCP73831/2&lt;/a&gt;</description>
 <gates>
-<gate name="G$1" symbol="MCP73831" x="0" y="0"/>
+<gate name="G$1" symbol="BATTERY_CHARGER" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23-5">
@@ -527,6 +527,48 @@ reference that is 1.5% over temperature.&lt;/p&gt;
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LP4060S" prefix="U">
+<description>&lt;h3&gt;500mA Standalone Linear Li-Ion Battery Charger&lt;/h3&gt;
+&lt;p&gt;The LP4060S is a complete constant-current/constant- voltage
+linear charger for single cell lithium-ion batteries. Its SOT23-5
+package and low external component count make the LP4060S
+ideally suited for portable applications. Furthermore, the
+LP4060S is specifically designed to work within USB power
+specifications. No external sense resistor is needed, and no
+blocking diode is required due to the internal MOSFET
+architecture. Thermal feedback regulates the charge current to
+limit the die temperature during high power operation or high
+ambient temperature. The charge voltage is fixed at 4.2V, and
+the charge current can be programmed externally with a single resistor.
+The LP4060S automatically terminates the charge cycle
+when the charge current drops to 1/10th the programmed value
+after the final float voltage is reached. When the input supply
+(wall adapter or USB supply) is removed, the LP4060S
+automatically enters a low current state, dropping the battery
+drain current to less than 1µA. Other features include charge
+current monitor, automatic recharge and a status pin to indicate
+charge termination and the presence of an input voltage.&lt;/p&gt;
+&lt;b&gt;Datasheet:&lt;/b&gt; &lt;a href="https://datasheet.lcsc.com/lcsc/2006190012_LOWPOWER-LP4060SB5F_C517260.pdf"&gt;LP4060S&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BATTERY_CHARGER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-5">
+<connects>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="PROG" pad="5"/>
+<connect gate="G$1" pin="STAT" pad="1"/>
+<connect gate="G$1" pin="VBAT" pad="3"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PART_NUMBER" value="?" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
